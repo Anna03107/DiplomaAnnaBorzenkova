@@ -1,8 +1,9 @@
-SELECT c.login, COUNT(o.courierId")
+SELECT c.login,
+COUNT(o.track)
 FROM "Couriers" AS c
-INNER JOIN "Orders" AS o ON c.id = o.courierId
+INNER JOIN "Orders" AS o ON o.courierId = c.id
 WHERE inDelivery = true
-GROUP BY o.courierId, c.login;
+GROUP BY c.login;
 
 
 SELECT track, finished, cancelled, inDelivery
